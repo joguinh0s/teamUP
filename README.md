@@ -1,23 +1,22 @@
-# Vida de Estudante
+# teamUP
 
 `Análise e Desenvolvimento de Sistemas - PUC Minas`
 
-`Desenvolvimento de aplicação web front-end`
+`Desenvolvimento de Aplicação Distribuída`
 
-`1º semestre/2022`
-
-O objetivo geral deste projeto é a criação de uma aplicação web de fácil acesso e uso que permita aos universitários a busca e troca de fontes de informações e conhecimentos entre seus colegas discentes.
+`4º semestre/2026`
 
 ## Integrantes
 
-* Anna Luiza de Angelis Souza Freitas
-* Daiane Campos Procópio
-* Fernanda Augusta de Barcelos Coura
-* Rúbia Karina Prado Costa
+* Anna Leocádio
+* Eduardo Ribeiro
+* Guilherme Vinicius
+* Kaique Fernandes
+* Josué Maciel
 
 ## Orientadora
 
-* Joyce Christina de Paiva Carvalho
+* N/A
 
 # Documentação
 
@@ -33,7 +32,7 @@ O objetivo geral deste projeto é a criação de uma aplicação web de fácil a
 
 # Hospedagem
 
-A aplicação em HTML/CSS/JS é um projeto que pode ser utilizado tanto em servidores como em navegadores web. Clique <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2022-1-e1-proj-web-t3-vida-de-estudante/src/paginaHome/index.html">aqui</a> para acessá-lo. 
+N/A
 
 # Código-Fonte
 
