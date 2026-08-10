@@ -20,72 +20,13 @@ A pessoa cria um perfil com jogos, elo, estilo, objetivos e horários. A TeamUp 
 Inclui: cadastro, autenticação, perfil, preferências, recomendações, match, chat entre matches, partidas e denúncia/bloqueio. A versão inicial suporta PC e um catálogo definido de jogos. Torneios, grupos/comunidades persistentes, integração automática com APIs de jogos, voz e monetização ficam fora do MVP.
 
 ## Personas
-|   | **Persona 1: Lucas – Jogador Casual** |
-|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Foto** | <img src="img/Lucas.png" alt="Lucas" width="150" height="150"> |
-| **Idade** | 24 anos |
-| **Ocupação** | Universitário, jogador casual de fim de semana |
-| **Localização** | Belo Horizonte – MG |
-| **Personalidade** | • Prático e objetivo<br>• Gosta de jogar com amigos<br>• Valoriza rapidez e simplicidade<br>• Não gosta de burocracia |
-| **Angústias e Frustrações** | • Demora na confirmação da quadra<br>• Dificuldade para ver horários livres<br>• Já perdeu jogos por falta de organização<br>• Falta de transparência nos horários disponíveis |
-| **Motivações** | • Jogar sem complicação<br>• Encontrar quadras rapidamente<br>• Garantir que o jogo aconteça<br>• Evitar perda de tempo |
-| **Expectativas** | • Ver horários em tempo real<br>• Reservar em poucos cliques<br>• Receber confirmação imediata<br>• Sistema simples e rápido |
 
-|   | **Persona 2: Camilla – Organizadora do Grupo** |
-|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Foto** | <img src="img/Camilla.png" alt="Camilla" width="150" height="150"> |
-| **Idade** | 29 anos |
-| **Ocupação** | Analista administrativa e organizadora de peladas |
-| **Localização** | Contagem – MG |
-| **Personalidade** | • Organizada<br>• Comunicativa<br>• Gosta de planejar<br>• Responsável pelo grupo |
-| **Angústias e Frustrações** | • Dificuldade em cobrar participantes<br>• Falta de confirmação de presença<br>• Atrasos e desorganização<br>• Falta de controle sobre pagamentos |
-| **Motivações** | • Facilitar a gestão do grupo<br>• Automatizar cobranças<br>• Evitar confusões<br>• Garantir participação |
-| **Expectativas** | • Divisão automática de valores<br>• Envio de convites e lembretes<br>• Controle de presença<br>• Pagamentos integrados |
-
-|   | **Persona 3: Rafael – Jogador Competitivo** |
-|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Foto** | <img src="img/Rafael.png" alt="Rafael" width="150" height="150"> |
-| **Idade** | 32 anos |
-| **Ocupação** | Técnico de TI e atleta amador |
-| **Localização** | Uberlândia – MG |
-| **Personalidade** | • Competitivo<br>• Determinado<br>• Gosta de desafios<br>• Busca novas partidas |
-| **Angústias e Frustrações** | • Falta de quadras disponíveis<br>• Dificuldade em encontrar partidas abertas<br>• Pouca visibilidade de jogos |
-| **Motivações** | • Jogar mais vezes<br>• Encontrar novos grupos<br>• Melhorar desempenho |
-| **Expectativas** | • Notificações de vagas<br>• Lista de partidas abertas<br>• Filtros por esporte e localização |
-
-|   | **Persona 4: João – Dono de Quadra** |
-|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Foto** | <img src="img/João.png" alt="João" width="150" height="150"> |
-| **Idade** | 54 anos |
-| **Ocupação** | Proprietário de quadra de bairro |
-| **Localização** | Betim – MG |
-| **Personalidade** | • Trabalhador<br>• Comunicativo<br>• Preza por organização<br>• Busca modernizar |
-| **Angústias e Frustrações** | • Agenda manual confusa<br>• Conflitos de horário<br>• Baixa divulgação<br>• Muitas ligações |
-| **Motivações** | • Aumentar reservas<br>• Reduzir erros<br>• Automatizar agendamentos |
-| **Expectativas** | • Agenda digital<br>• Confirmação automática<br>• Mais visibilidade |
-
-|   | **Persona 5: Patricia – Gestora de Complexo Esportivo** |
-|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Foto** | <img src="img/Patricia.png" alt="Patricia" width="150" height="150"> |
-| **Idade** | 38 anos |
-| **Ocupação** | Gestora de múltiplas quadras esportivas |
-| **Localização** | Juiz de Fora – MG |
-| **Personalidade** | • Líder<br>• Analítica<br>• Focada em resultados<br>• Organizada |
-| **Angústias e Frustrações** | • Controle manual de várias quadras<br>• Falta de relatórios<br>• Pagamentos desorganizados |
-| **Motivações** | • Centralizar gestão<br>• Acompanhar ocupação<br>• Reduzir retrabalho |
-| **Expectativas** | • Dashboard completo<br>• Relatórios financeiros<br>• Gestão integrada |
-
-|   | **Persona 6: Carlos – Funcionário da Recepção** |
-|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Foto** | <img src="img/Carlos.png" alt="Carlos" width="150" height="150"> |
-| **Idade** | 26 anos |
-| **Ocupação** | Atendente de quadra esportiva |
-| **Localização** | Ribeirão das Neves – MG |
-| **Personalidade** | • Atencioso<br>• Ágil<br>• Comunicativo<br>• Resolve rápido |
-| **Angústias e Frustrações** | • Filas e atrasos<br>• Agenda desatualizada<br>• Retrabalho constante |
-| **Motivações** | • Agilizar atendimento<br>• Reduzir erros<br>• Melhorar experiência |
-| **Expectativas** | • Check-in digital<br>• Confirmação rápida<br>• Agenda clara |
-
+| Persona | Contexto e necessidade | Dor principal |
+|---|---|---|
+| **Lucas, 23, competitivo** | Joga Valorant no PC à noite e quer uma dupla com elo e meta semelhantes para subir de ranking. | Perde tempo em servidores cheios de pedidos irrelevantes. |
+| **Marina, 27, social/casual** | Joga jogos cooperativos nos fins de semana e procura pessoas respeitosas para sessões leves. | Não consegue avaliar afinidade e segurança antes de chamar alguém. |
+| **Rafael, 31, organizador** | Reúne amigos para jogos de equipe e precisa completar vagas para uma partida marcada. | Confirmações e desistências ficam dispersas em vários chats. |
+| **Ana, 29, moderadora** | Administra a segurança da plataforma. | Precisa avaliar denúncias e aplicar medidas de forma rastreável. |
 
 ## Histórias de Usuários
 
