@@ -9,7 +9,7 @@ A TeamUp é uma plataforma web e mobile para jogadores de PC maiores de 18 anos 
 
 ### Problema sob a perspectiva do usuário
 
-“Quero encontrar rapidamente pessoas confiáveis para jogar comigo, que usem a mesma plataforma, tenham disponibilidade e objetivos parecidos com os meus, sem ter de procurar em vários grupos desorganizados.”
+“Quero encontrar rapidamente pessoas confiáveis para jogar comigo, que usem a mesma plataforma, tenham disponibilidade e objetivos parecidos com os meus, sem ter que procurar em vários grupos desorganizados e confusos.”
 
 ### Proposta de solução
 
