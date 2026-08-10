@@ -1,11 +1,23 @@
 
 # Especificações do Projeto
 
+**Versão:** 1.0 · **Data:** 10 de agosto de 2026 · **Status:** proposta para validação
+
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Com o crescimento da prática de esportes recreativos como futebol, vôlei, beach tênis, dentre outros, aumentou também a demanda pelo aluguel de quadras esportivas. No entanto, muitas empresas que oferecem esse serviço ainda realizam o controle de reservas de forma manual, utilizando principalmente WhatsApp e telefone.
+A TeamUp é uma plataforma web e mobile para jogadores de PC maiores de 18 anos encontrarem pessoas compatíveis para jogar. O produto substitui a busca fragmentada em Discord, redes sociais e chats de jogos por perfis estruturados, recomendações de compatibilidade, match mútuo, chat e organização de partidas.
 
-Essa falta de organização digital centralizada gera dificuldades tanto para os administradores quanto para os clientes. Diante desse cenário, surge a proposta do aplicativo FairPlay, uma solução móvel que visa organizar e otimizar o processo de reservas, pagamentos e gerenciamento de horários de quadras esportivas.
+### Problema sob a perspectiva do usuário
+
+“Quero encontrar rapidamente pessoas confiáveis para jogar comigo, que usem a mesma plataforma, tenham disponibilidade e objetivos parecidos com os meus, sem ter de procurar em vários grupos desorganizados.”
+
+### Proposta de solução
+
+A pessoa cria um perfil com jogos, elo, estilo, objetivos e horários. A TeamUp calcula e apresenta candidatos compatíveis; quando há interesse mútuo, cria um match e libera a conversa. A pessoa também pode publicar e entrar em partidas agendadas.
+
+### Escopo do MVP
+
+Inclui: cadastro, autenticação, perfil, preferências, recomendações, match, chat entre matches, partidas e denúncia/bloqueio. A versão inicial suporta PC e um catálogo definido de jogos. Torneios, grupos/comunidades persistentes, integração automática com APIs de jogos, voz e monetização ficam fora do MVP.
 
 ## Personas
 |   | **Persona 1: Lucas – Jogador Casual** |
