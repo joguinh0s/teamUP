@@ -21,12 +21,12 @@ Inclui: cadastro, autenticação, perfil, preferências, recomendações, match,
 
 ## Personas
 
-| Persona | Tipo de Jogador | Contexto e necessidade | Dor principal |
-|---|---|---|
-| **Lucas 23** | Competitivo | Joga Valorant no PC à noite e quer uma dupla com elo e meta semelhantes para subir de ranking. | Perde tempo em servidores cheios de pedidos irrelevantes. |
-| **Marina 27** |  Social/Casual | Joga jogos cooperativos nos fins de semana e procura pessoas respeitosas para sessões leves. | Não consegue avaliar afinidade e segurança antes de chamar alguém. |
-| **Rafael 31** |  Organizador | Reúne amigos para jogos de equipe e precisa completar vagas para uma partida marcada. | Confirmações e desistências ficam dispersas em vários chats. |
-| **Ana 29** |  Moderadora | Administra a segurança da plataforma. | Precisa avaliar denúncias e aplicar medidas de forma rastreável. |
+| Persona | Tipo de jogador | Contexto e necessidade | Principal dor |
+|---|---|---|---|
+| **Lucas, 23 anos** |  Competitivo | Joga Valorant no PC à noite e busca uma dupla com elo e objetivos semelhantes para subir de ranking. | Perde tempo em servidores com muitos pedidos irrelevantes. |
+| **Marina, 27 anos** |  Social / Casual | Joga títulos cooperativos nos fins de semana e procura pessoas respeitosas para sessões leves e descontraídas. | Não consegue avaliar afinidade e segurança antes de iniciar uma partida. |
+| **Rafael, 31 anos** |  Organizador | Reúne amigos para jogos em equipe e precisa completar vagas para partidas previamente marcadas. | Confirmações e desistências ficam dispersas em diferentes chats. |
+| **Ana, 29 anos** |  Moderadora | Administra a segurança da plataforma, analisando denúncias e garantindo o cumprimento das regras. | Precisa avaliar denúncias e aplicar medidas de forma organizada e rastreável. |
 
 ## Histórias de Usuários
 
