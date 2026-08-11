@@ -21,12 +21,12 @@ Inclui: cadastro, autenticação, perfil, preferências, recomendações, match,
 
 ## Personas
 
-| Persona | Contexto e necessidade | Dor principal |
+| Persona | Tipo de Jogador | Contexto e necessidade | Dor principal |
 |---|---|---|
-| **Lucas, 23, competitivo** | Joga Valorant no PC à noite e quer uma dupla com elo e meta semelhantes para subir de ranking. | Perde tempo em servidores cheios de pedidos irrelevantes. |
-| **Marina, 27, social/casual** | Joga jogos cooperativos nos fins de semana e procura pessoas respeitosas para sessões leves. | Não consegue avaliar afinidade e segurança antes de chamar alguém. |
-| **Rafael, 31, organizador** | Reúne amigos para jogos de equipe e precisa completar vagas para uma partida marcada. | Confirmações e desistências ficam dispersas em vários chats. |
-| **Ana, 29, moderadora** | Administra a segurança da plataforma. | Precisa avaliar denúncias e aplicar medidas de forma rastreável. |
+| **Lucas 23** | Competitivo | Joga Valorant no PC à noite e quer uma dupla com elo e meta semelhantes para subir de ranking. | Perde tempo em servidores cheios de pedidos irrelevantes. |
+| **Marina 27** |  Social/Casual | Joga jogos cooperativos nos fins de semana e procura pessoas respeitosas para sessões leves. | Não consegue avaliar afinidade e segurança antes de chamar alguém. |
+| **Rafael 31** |  Organizador | Reúne amigos para jogos de equipe e precisa completar vagas para uma partida marcada. | Confirmações e desistências ficam dispersas em vários chats. |
+| **Ana 29** |  Moderadora | Administra a segurança da plataforma. | Precisa avaliar denúncias e aplicar medidas de forma rastreável. |
 
 ## Histórias de Usuários
 
