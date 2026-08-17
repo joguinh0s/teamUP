@@ -17,17 +17,31 @@ A pessoa cria um perfil com jogos, elo, estilo, objetivos e horários. A TeamUp 
 
 ### Escopo do MVP
 
-Inclui: cadastro, autenticação, perfil, preferências, recomendações, match, chat entre matches, partidas e denúncia/bloqueio. A versão inicial suporta PC e um catálogo definido de jogos. Torneios, grupos/comunidades persistentes, integração automática com APIs de jogos, voz e monetização ficam fora do MVP.
+A TeamUp terá como MVP uma plataforma para conectar jogadores que procuram pessoas compatíveis para jogar, considerando informações como jogos de interesse, elo, estilo de jogo, objetivos e disponibilidade.
+
+O foco inicial da aplicação será o **Match, comunicação e Jogue Agora**, permitindo que o usuário encontre jogadores com interesses semelhantes, realize Match, converse e encontre pessoas disponíveis para jogar naquele momento.
+
+### Arquitetura da Solução
+
+A TeamUp será desenvolvida como uma **aplicação distribuída**, composta por uma aplicação Web, uma aplicação Mobile, um backend centralizado e um banco de dados NoSQL.
+
+As versões Web e Mobile utilizarão o mesmo backend e os mesmos dados, porém terão interfaces adaptadas às características de cada plataforma.
+
+- **Web:** maior foco no recurso **Jogue Agora**, busca e interação com jogadores disponíveis.
+- **Mobile:** maior foco em **Match, interação social e comunicação**.
+- **Backend:** responsável pelas regras de negócio, autenticação, usuários, Match, chat, jogos, avaliações, disponibilidade e demais funcionalidades.
+- **Banco de dados:** responsável pelo armazenamento dos dados da aplicação.
+
+A comunicação entre Web, Mobile e Backend será realizada por meio de uma **API REST**, utilizando
 
 ## Personas
 
-| Persona | Tipo de jogador | Contexto e necessidade | Principal dor |
+| Persona | Tipo | Contexto e necessidade | Principal dor |
 |---|---|---|---|
-| **Lucas, 23 anos** |  Competitivo | Joga Valorant no PC à noite e busca uma dupla com elo e objetivos semelhantes para subir de ranking. | Perde tempo em servidores com muitos pedidos irrelevantes. |
-| **Marina, 27 anos** |  Social / Casual | Joga títulos cooperativos nos fins de semana e procura pessoas respeitosas para sessões leves e descontraídas. | Não consegue avaliar afinidade e segurança antes de iniciar uma partida. |
-| **Rafael, 31 anos** |  Organizador | Reúne amigos para jogos em equipe e precisa completar vagas para partidas previamente marcadas. | Confirmações e desistências ficam dispersas em diferentes chats. |
-| **Ana, 29 anos** |  Moderadora | Administra a segurança da plataforma, analisando denúncias e garantindo o cumprimento das regras. | Precisa avaliar denúncias e aplicar medidas de forma organizada e rastreável. |
-
+| **Lucas, 23 anos** | Competitivo | Joga Valorant no PC à noite e busca uma dupla com elo e objetivos semelhantes para subir de ranking. | Perde tempo em servidores com pedidos irrelevantes. |
+| **Marina, 27 anos** | Social/Casual | Joga cooperativos nos fins de semana e procura pessoas respeitosas para partidas leves e descontraídas. | Não consegue avaliar afinidade e segurança antes de jogar. |
+| **Rafael, 31 anos** | Organizador | Reúne amigos para jogos em equipe e precisa completar vagas para partidas marcadas. | Confirmações e desistências ficam dispersas em diferentes chats. |
+| **Ana, 29 anos** | Moderadora | Administra a segurança da plataforma, analisando denúncias e garantindo o cumprimento das regras. | Precisa avaliar denúncias e aplicar medidas de forma organizada e rastreável. |
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
@@ -88,85 +102,59 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001|O sistema deve permitir que usuário se cadastre informando nome, CPF, telefone, email e senha. | ALTA | 
-|RF-002|O sistema deve solicitar uma foto em tempo real do rosto para oficializar o cadastro na aplicação.| ALTA |
-|RF-003|O sistema deve permitir que usuários e empresas realizem login com credenciais válidas.| ALTA |
-|RF-004|O sistema deve permitir que o usuário visualize e edite seus dados de perfil.| BAIXA |
-|RF-005|O sistema deve permitir que o usuário faça reservas e cancelamentos.| ALTA |
-|RF-006|O sistema deve permitir que o usuário faça pagamento.| ALTA |
-|RF-007|O sistema deve permitir que empresas se cadastrem e criem seu perfil (nome, CNPJ, contato e localização).| ALTA |
-|RF-008|O sistema deve permitir que a empresa visualize e edite seus dados de perfil.| MÉDIA |
-|RF-009|O sistema deve permitir que a empresa cadastre o espaço para a prática dos esportes (ex: Quadras e Campos).| ALTA |
-|RF-010|O sistema deve permitir que a empresa visualize, edite e exclua quadras.| MÉDIA |
-|RF-011|O sistema deve permitir que a empresa faça cancelamento de reservas.| ALTA |
-|RF-012|O sistema deve permitir que a empresa integre seus sistema de pagamento (como um pagseguro por exemplo).| ALTA |
-|RF-013|O sistema deve permitir que a empresa define dias e horários disponíveis para cada quadra.| ALTA |
-|RF-014|O sistema deve permitir que usuários pesquisem quadras por localização, tipo de esporte e preço.| ALTA |
-|RF-015|O sistema deve exibir os horários disponíveis e ocupados de uma quadra por dia/semana.| MÉDIA |
-|RF-016|O sistema deve impedir reservas em horários já ocupados na mesma quadra.| ALTA |
-|RF-017|O sistema deve permitir registrar pagamento (ex.: Pix/cartão) e associar à reserva.| ALTA |
-|RF-018|O sistema deve impedir que um usuário banido crie uma nova conta com o mesmo e-mail e CPF.| MÉDIA |
-|RF-019|O sistema deve permitir que os usuários avaliem quadras e empresas com notas.| BAIXA |
-|RF-020|O sistema deve permitir que usuário localize esporte pelo tipo e tente fechar um horário e data com outros usuários aleatórios.| MÉDIA |
-|RF-021|O sistema deve permitir a exportação de agendamentos para calendários externos (Google Calendar, iCal, Outlook) via padrão .ics ou integração via API.| BAIXA |
-|RF-022|O sistema deve notificar usuário e empresa quanto a reservas e pagamentos.| MÉDIA |
-|RF-023|O sistema deve permitir que o usuário solicite um dia e horário para ser mensalista.| ALTA |
-|RF-024|O sistema deve retornar aprovação ou não do dia e horário para ser mensal da empresa para usuário, autorizado, não autorizado ou trazendo os dias e horários.| ALTA |
-|RF-025|O sistema deve permitir que a empresa bloqueie datas e horários determinados.| ALTA |
-|RF-026|O sistema deve solicitar número de jogadores no ato da reserva.| BAIXA |
-|RF-027|O sistema deve limitar a quantidade de reservas que o usuário pode realizar no mesmo dia.| MÉDIA |
-|RF-028|A reserva pode ser feita 7 dias antes com data e horário marcado;  Pode ser cancelada em até 24Hrs antes da data e horário marcados.| ALTA |
-|RF-029|A reserva pode ser feita, concluída e paga até 10 minutos antes do horário combinado.| ALTA |
+| ID | Descrição do Requisito | Prioridade |
+|---|---|---|
+| RF-001 | O sistema deve permitir que o usuário crie uma conta informando seus dados pessoais, credenciais e confirmação de maioridade. | ALTA |
+| RF-002 | O sistema deve permitir que o usuário informe e altere seus jogos, plataforma, elo, estilo de jogo, objetivos e disponibilidade. | ALTA |
+| RF-003 | O sistema deve apresentar jogadores compatíveis considerando jogos de interesse, elo, estilo de jogo, objetivos e disponibilidade. | ALTA |
+| RF-004 | O sistema deve permitir que o usuário curta ou recuse jogadores recomendados, gerando um Match quando houver interesse mútuo. | ALTA |
+| RF-005 | O sistema deve permitir que usuários com Match troquem mensagens privadas. | ALTA |
+| RF-006 | O sistema deve permitir que o usuário bloqueie ou denuncie outros jogadores, interrompendo a interação quando necessário e encaminhando a denúncia para análise. | ALTA |
+| RF-007 | O sistema deve permitir que o usuário encontre jogadores disponíveis para jogar naquele momento, utilizando critérios como jogo, elo e objetivo da partida. | ALTA |
+| RF-008 | O sistema deve permitir que o usuário informe jogo, elo, objetivo e disponibilidade para aparecer na seção "Jogue Agora" e ser encontrado por outros jogadores. | ALTA |
+| RF-009 | O sistema deve permitir que os usuários consultem uma biblioteca de jogos cadastrados na plataforma, visualizando informações como nome, imagem, gênero, plataforma e sinopse. | MÉDIA |
+| RF-010 | O sistema deve permitir que os usuários avaliem os jogos cadastrados utilizando uma escala de estrelas e, opcionalmente, publiquem comentários sobre o jogo. | MÉDIA |
+| RF-011 | O sistema deve permitir que os usuários avaliem jogadores após uma interação ou partida, contribuindo para sua reputação dentro da plataforma. | MÉDIA |
+| RF-012 | O sistema deve notificar o usuário sobre eventos relevantes, como novos Matches, mensagens, avaliações e outras interações realizadas na plataforma. | MÉDIA |
+| RF-013 | O sistema deve permitir que o usuário visualize o perfil público de outros jogadores, incluindo jogos, elo, estilo de jogo, avaliações e disponibilidade, respeitando as configurações de privacidade. | MÉDIA |
+| RF-014 | O sistema deve permitir que o administrador visualize denúncias, analise ocorrências e aplique medidas administrativas, incluindo bloqueio ou banimento de usuários. | ALTA |
+| RF-015 | O sistema deve permitir que um usuário banido solicite a reavaliação da penalidade, possibilitando ao administrador analisar e decidir pela manutenção ou remoção do banimento. | MÉDIA |
+| RF-016 | O sistema deve permitir que o administrador cadastre, edite e remova jogos da biblioteca da plataforma, incluindo informações como nome, imagem, gênero, plataforma e sinopse. | MÉDIA |
+| RF-017 | O sistema deve permitir que o administrador cadastre, edite, ative, desative e exclua anúncios relacionados ao universo gamer exibidos na plataforma. | BAIXA |
 
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001|O sistema deve ser intuitivo, permitindo que um usuário realize uma reserva em até 3 minutos. | BAIXA | 
-|RNF-002|O sistema deve responder às principais ações (listar horários, reservar, pagar) em até 3 segundos em condições normais.|  BAIXA | 
-|RNF-003|O sistema deve estar disponível 24/7, exceto em janelas de manutenção programada.| ALTA |
-|RNF-004|O sistema deve proteger contas com senha segura (hash + salt) e permitir recuperação de acesso.| ALTA | 
-|RNF-005|O sistema deve armazenar e processar dados pessoais para segurança (mínimo necessário + consentimento).| MÉDIA |
-|RNF-006|O sistema deve garantir consistência das reservas, evitando duplicidade e conflito na concorrência.| ALTA |
-|RNF-007|O sistema deve funcionar em navegadores modernos e ser responsivo para celulares e tablets.| ALTA | 
-|RNF-008|O sistema deve suportar crescimento de usuários/quadras sem degradação significativa.| ALTA | 
-|RNF-009|O sistema deve possuir código modular e documentação mínima (README + endpoints), facilitando a manutenção.| ALTA | 
-|RNF-010|O sistema deve ter acesibilidade e suporte a navegação básica para usuários e suas limitações.| MÉDIA | 
-|RNF-011|O sistema deve realizar backups periódicos e permitir restauração em caso de falha.| ALTA |
-|RNF-012|O sistema deve exigir que a senha tenha no mínimo 8 caracteres, incluindo letras, números e caracteres especiais.| BAIXA | 
-|RNF-013|A aplicação deve manter uma identidade visual consistente em todas as páginas, considerando a paleta de cores, a tipografia e o layout.| MÉDIA | 
-|RNF-014|O sistema deve garantir que notificações críticas (confirmação e cancelamento) sejam enviadas com uma taxa de entrega de 99% em até 2 minutos após o evento gerador.| ALTA | 
-|RNF-015|O sistema deve garantir a reserva temporária de um horário selecionado por no máximo 10 minutos durante o processo de checkout, liberando-o automaticamente caso o pagamento não seja confirmado.| BAIXA |
-|RNF-016|O sistema deve garantir que, no ato do cadastro, o usuário aceite um Termo de Utilização e a empresa aceite o termo de responsabilidade.| ALTA |
-|RNF-017|O sistema deve ter número mínimo de jogadores para fechamento de datas e horário em relação ao esporte escolhido.| MÉDIA | 
+| ID | Descrição do Requisito | Prioridade |
+|---|---|---|
+| RNF-001 | As principais operações da aplicação devem responder em até 3 segundos em condições normais de utilização, incluindo busca de jogadores, carregamento de perfis, envio de mensagens e consulta de partidas disponíveis. | ALTA |
+| RNF-002 | As senhas dos usuários devem ser armazenadas utilizando mecanismo seguro de hash e salt, não sendo armazenadas em texto puro. | ALTA |
+| RNF-003 | A aplicação deve permanecer disponível durante manutenções ou atualizações de componentes individuais, evitando que a indisponibilidade de um serviço interrompa o funcionamento dos demais. | ALTA |
+| RNF-004 | A aplicação deve disponibilizar as mesmas funcionalidades principais nas versões Web e Mobile, adaptando a interface, navegação e disposição dos elementos às características de cada plataforma. | ALTA |
+| RNF-005 | A arquitetura da aplicação deve permitir a expansão da quantidade de usuários, partidas, Matches, mensagens e jogos cadastrados sem exigir alterações significativas na estrutura dos serviços existentes. | MÉDIA |
+| RNF-006 | Um usuário deve conseguir realizar as principais ações da aplicação, como encontrar jogadores, realizar um Match, iniciar uma conversa e procurar jogadores no Jogue Agora, sem necessidade de treinamento prévio. | ALTA |
+| RNF-007 | A aplicação deve impedir a criação de registros duplicados ou conflitantes que comprometam a integridade dos dados, especialmente em contas, Matches, avaliações e disponibilidade de jogadores. | ALTA |
+| RNF-008 | As mensagens enviadas pelo chat devem ser entregues ao destinatário sem duplicidade e manter a identificação do remetente, destinatário e data/hora do envio. | ALTA |
+| RNF-009 | O sistema deve garantir que um Match seja criado somente quando houver interesse mútuo entre os jogadores e que cada combinação de jogadores resulte em no máximo um Match ativo. | ALTA |
+| RNF-010 | As informações de disponibilidade dos jogadores devem refletir seu estado atual, removendo ou atualizando automaticamente uma disponibilidade que tenha expirado ou sido encerrada pelo usuário. | ALTA |
+| RNF-011 | Os dados essenciais da conta, perfil, Matches, mensagens, avaliações e disponibilidade devem permanecer sincronizados entre as versões Web e Mobile da aplicação. | ALTA |
+| RNF-012 | A aplicação deve possuir arquitetura modular, separando responsabilidades entre seus componentes e serviços, permitindo manutenção ou atualização de um componente sem exigir alterações nos demais quando não houver dependência direta. | MÉDIA | 
 
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados nas tabelas a seguir.
-
-| ID | Restrições de Gestão                                                                                                                                                                                                                     |
-| -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 01 | O projeto deverá ser desenvolvido e entregue até o final do semestre letivo, respeitando os prazos definidos pela disciplina e pelo cronograma acadêmico.                                                                                |
-| 02 | O projeto deverá ser desenvolvido utilizando ferramentas, tecnologias e softwares gratuitos ou que possuam licenças acadêmicas, garantindo que todos os membros da equipe tenham acesso aos recursos necessários.                        |
-| 03 | O desenvolvimento do projeto deverá seguir uma metodologia ágil, com reuniões periódicas de acompanhamento entre os membros da equipe, visando monitorar o progresso das atividades e garantir o cumprimento do cronograma estabelecido. |
-| 04 | Todas as atividades do projeto deverão ser documentadas adequadamente, incluindo requisitos, diagramas, decisões de projeto e demais artefatos necessários para a compreensão e manutenção do sistema.                                   |
-| 05 | O projeto deverá ser desenvolvido em equipe, com divisão clara de responsabilidades entre os membros, garantindo a colaboração e a participação de todos durante o processo de desenvolvimento.                                          |
-| 06 | As decisões relacionadas ao escopo, funcionalidades e alterações relevantes no projeto deverão ser discutidas e aprovadas pelo grupo antes de sua implementação.                                                                         |
-
-| ID | Restrições de Negócio                                                                                                                                                                                                                     |
-| -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 01 | O sistema deverá permitir a realização de reservas apenas dentro dos horários de funcionamento definidos pela empresa administradora da quadra.                                                                                |
-| 02 | Cada horário disponível poderá ser reservado por apenas um usuário ou grupo por vez, evitando conflitos de agendamento.                        |
-| 03 | O desenvolvimento do projeto deverá seguir uma metodologia ágil, com reuniões periódicas de acompanhamento entre os membros da equipe, visando monitorar o progresso das atividades e garantir o cumprimento do cronograma estabelecido. |
-| 04 | O cancelamento de reservas deverá seguir as regras definidas pela empresa administradora, podendo haver limites de tempo para cancelamento sem penalidades.                                 |
-| 05 | O sistema deverá registrar todas as reservas realizadas, permitindo o controle e histórico de utilização das quadras.  |
-| 06 | O pagamento das reservas poderá ser realizado por meios definidos pela empresa, como Pix, cartão ou pagamento presencial no local.                                                                         |
-| 07 | A responsabilidade pela segurança física do ambiente esportivo e pela manutenção das quadras é exclusivamente da empresa administradora, não sendo responsabilidade do sistema.      |
-| 08 | Os administradores deverão possuir permissões especiais no sistema para cadastrar, editar ou remover quadras e horários disponíveis.      |
+| ID | Descrição da Restrição |
+|---|---|
+| R01 | O backend da aplicação deverá ser desenvolvido utilizando C# e ASP.NET Core Web API. |
+| R02 | A aplicação Web deverá ser desenvolvida utilizando React e JavaScript. |
+| R03 | A aplicação Mobile deverá ser desenvolvida utilizando React Native. |
+| R04 | O sistema deverá utilizar MongoDB como banco de dados não relacional (NoSQL). |
+| R05 | A comunicação entre as aplicações Web, Mobile e o backend deverá ocorrer por meio de uma API REST, utilizando requisições HTTP e dados no formato JSON. |
+| R06 | O sistema deverá possuir versões Web e Mobile, compartilhando o mesmo backend e banco de dados, com funcionalidades equivalentes e interfaces adaptadas às características de cada plataforma. |
+| R07 | O desenvolvimento deverá utilizar Git e GitHub para controle de versão e integração do trabalho entre os integrantes da equipe. |
+| R08 | O desenvolvimento deverá utilizar Visual Studio para o backend e Visual Studio Code para as aplicações Web e Mobile. |
+| R09 | A aplicação deverá ser disponibilizada em ambiente de hospedagem compatível com sua arquitetura, utilizando Azure, SmartASP.NET ou outro serviço definido pela equipe e aprovado para o projeto. |
+| R10 | As versões Web e Mobile deverão consumir a mesma API e compartilhar os dados armazenados no MongoDB, não sendo permitido o acesso direto ao banco de dados pelos aplicativos clientes. |
 
 
 ## Diagrama de Casos de Uso
