@@ -48,18 +48,24 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-| Lucas | Criar uma conta usando e-mail e senha. | Acessar a plataforma ver horários disponíveis e reservar rapidamente. | Garantir que eu consiga jogar sem complicação e sem perder tempo. |
-| Camila | Enviar convites, confirmar presença e dividir valores automaticamente. | Facilitar a organização dos jogos e evitar confusões com pagamentos.|
-| Rafael | Encontrar partidas abertas e receber alertas de vagas. | Jogar mais vezes e participar de jogos desafiadores. |
-| João | Uma agenda digital clara e automatizada. | Evitar conflitos de horário e aumentar a ocupação da quadra. |
-| Patricia | Relatórios de ocupação e receita, e controle centralizado. | Tomar decisões estratégicas e reduzir retrabalho. |
-| Carlos | Fazer check-in digital e visualizar reservas do dia. | Agilizar o atendimento e evitar erros operacionais. |
-| Gabriel  | Acompanhar indicadores gerais do negócio e resultados estratégicos. | Tomar decisões de alto nível e garantir o crescimento sustentável da empresa. | 
-| Fernanda  | Monitorar desempenho da equipe e acompanhar processos internos. | Garantir eficiência, reduzir falhas e melhorar a produtividade. |
-| Thiago | Acessar documentação clara e requisitos bem definidos. | Implementar funcionalidades corretamente e evitar retrabalho. |
-| Marina  | Acessar dados de uso e comportamento dos usuários. | Criar campanhas mais eficazes e aumentar a adesão ao sistema. |
-| Rodrigo  | Ter informações claras sobre planos, preços e benefícios. | Apresentar o produto com segurança e fechar mais vendas. |
-| Beatriz | Acessar relatórios de faturamento, custos e fluxo de caixa. | Controlar a saúde financeira e apoiar decisões estratégicas. |
+| Lucas — Jogador competitivo | Criar minha conta e informar meus jogos, elo, estilo de jogo e disponibilidade. | Encontrar jogadores compatíveis com meu perfil. |
+| Lucas — Jogador competitivo | Receber recomendações de jogadores com jogos e elo semelhantes aos meus. | Encontrar parceiros adequados para jogar. |
+| Lucas — Jogador competitivo | Curtir ou recusar jogadores recomendados. | Criar um Match quando houver interesse mútuo. |
+| Lucas — Jogador competitivo | Encontrar jogadores disponíveis para jogar naquele momento. | Formar uma partida sem depender de um lobby aleatório. |
+| Lucas — Jogador competitivo | Avaliar jogadores após uma partida. | Contribuir com a reputação dos jogadores dentro da plataforma. |
+| Marina — Jogadora social/casual | Informar meus jogos favoritos, estilo de jogo e objetivos. | Encontrar pessoas com interesses semelhantes aos meus. |
+| Marina — Jogadora social/casual | Encontrar jogadores com interesses e estilos semelhantes aos meus. | Criar novas amizades através dos jogos. |
+| Marina — Jogadora social/casual | Conversar com jogadores com quem tive Match. | Conhecer melhor a pessoa e combinar a partida. |
+| Marina — Jogadora social/casual | Bloquear ou denunciar jogadores. | Evitar interações inadequadas e ter mais segurança na plataforma. |
+| Marina — Jogadora social/casual | Avaliar jogos e escrever comentários. | Compartilhar minha experiência com outros jogadores. |
+| Rafael — Organizador | Informar jogo, elo, objetivo e horário em que estou disponível. | Encontrar jogadores interessados em participar da partida. |
+| Rafael — Organizador | Encontrar jogadores compatíveis para minha partida. | Completar minha equipe. |
+| Rafael — Organizador | Conversar com os jogadores interessados. | Combinar os detalhes da partida. |
+| Rafael — Organizador | Receber notificações sobre Matches, mensagens e interações. | Acompanhar as atividades relacionadas às minhas partidas. |
+| Ana — Moderadora | Visualizar e analisar denúncias realizadas pelos usuários. | Identificar comportamentos inadequados na plataforma. |
+| Ana — Moderadora | Bloquear ou banir usuários que violem as regras da plataforma. | Manter a comunidade segura. |
+| Ana — Moderadora | Analisar solicitações de reavaliação de usuários banidos. | Decidir pela manutenção ou remoção da penalidade. |
+| Ana — Administradora | Cadastrar, editar e remover jogos da biblioteca. | Manter os jogos disponíveis na plataforma atualizados. |
 
 
 ## Modelagem do Processo de Negócio 
