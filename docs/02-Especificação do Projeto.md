@@ -177,7 +177,7 @@ Cruzado entre Product Owner, Product Manager, Requisitos Funcionais e Requisitos
 
 teste
 
-<img width="1031" height="510" alt="Image" src="https://github.com/user-attachments/assets/dff60783-be3c-4e85-8a28-5d29709fe5e7" />
+<img width="1033" height="545" alt="Image" src="https://github.com/user-attachments/assets/e7f577c8-8aa9-45c8-973e-d63723594670" />
 
 <img width="2480" height="1026" alt="Matriz Rastreabilidade" src="https://github.com/user-attachments/assets/c56af57f-fd14-4ed9-9056-02736f46adc1" />
 
