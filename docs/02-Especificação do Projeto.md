@@ -175,6 +175,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 Cruzado entre Product Owner, Product Manager, Requisitos Funcionais e Requisitos Não Funcionais.
 
+teste
+
+<img width="1036" height="512" alt="Image" src="https://github.com/user-attachments/assets/eccfb517-2337-41b1-a1db-f0581e9f5add" />
+
 <img width="2480" height="1026" alt="Matriz Rastreabilidade" src="https://github.com/user-attachments/assets/c56af57f-fd14-4ed9-9056-02736f46adc1" />
 
 > **Links Úteis**:
